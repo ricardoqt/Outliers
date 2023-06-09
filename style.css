@@ -41,6 +41,8 @@ html, body
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, rgba(255,229,56,1) 15%, rgba(0,255,255,1) 100%);
+    background-size: 150% 150%;
+    animation: gradient 10s ease infinite;
     color: #ffe538 !important;
 }
 
@@ -166,18 +168,18 @@ html, body
     width: 100%;
     padding: 15px 15px;
     background: linear-gradient(90deg, rgba(255,229,56,1) 15%, rgba(0,255,255,1) 100%);
+    background-size: 150% 150%;
     border: 0px;
     border-radius: 30px;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.35s;
+    color: #21201f;
 }
 
-#login_button:hover 
-{
-    transform: scale(1.05);
-}
+#login_button:hover {transform: scale(1.05);}
+
 .rodape
 {
     left: 0;
@@ -187,6 +189,13 @@ html, body
     color: white;
     background-color: #161615;
     font-size: 13px;
+}
+
+@keyframes gradient 
+{
+	0% {background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}
 }
 
 @keyframes shake
@@ -224,6 +233,7 @@ html, body
     gap: 90px;
     position: relative;
 }
+
 .cabecalho__menu__link{
     font-size: 22px;
     font-weight: 600;
@@ -285,6 +295,14 @@ html, body
 {
     border-bottom: solid 3px;
 }
+.search-filters-header-title.active:hover
+{
+    background-color: #272727;
+}
+.search-filters-header-title:hover
+{
+    background-color: #272727;
+}
 
 .search-filter-index-counter
 {
@@ -305,7 +323,11 @@ html, body
 
 .search-filters-row.double-input input {width: 48%;}
 
+.search-filters-row.double-input input:hover {background-color: #272727;}
+
 .search-filters-row.triple-input input {width: 31.7%;}
+
+.search-filters-row.triple-input input:hover {background-color: #272727;}
 
 .search-filters-row.double-select .search-filter-select {width: 49%;}
 
@@ -400,6 +422,9 @@ html, body
     display: flex;
     align-items: center;
 }
+.search-table td:hover{
+    background-color: #272727;
+}
 
 .search-table-url-row i
 {
@@ -420,4 +445,20 @@ html, body
     padding: 5px 10px;
     border-radius: 5px;
     background-color: #161615;
+}
+.search-button{
+    background-color: #ffe538;
+    border-radius: 16px;
+    padding: 10px 13px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+.search-button:hover{
+    background-color: #e2c713;
+    transform: scale(1.05);}
+
+.search-button i{
+    position: relative;
+    left: 5px;
 }
