@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Outliers Club</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.ico"/>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="container">
+        <form id="login_form">
+            <div id="form_header">
+                <span>Login</span>
+            </div>
+            <span id="error-report"></span>
+            <div id="inputs">
+                <div class="input-box username">
+                    <label class="input-box-title" for="name">
+                        Username
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="username" name="username">
+                        </div>
+                    </label>
+                </div>
+                <div class="input-box password">
+                    <label class="input-box-title" for="password">
+                        Senha
+                        <div class="input-field">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" id="password" name="password">
+                        </div>
+                    </label>
+                </div>
+            </div>  
+            <button type="submit" id="login_button">Entrar</button>
+        </form>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function(e)
+    {
+        (async() =>
+        {
+            setHandlers();
+        })();
+    })
+</script>
+</html>
